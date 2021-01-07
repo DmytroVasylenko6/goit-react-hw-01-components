@@ -1,0 +1,10 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 1px 8px 17px -2px #6d6d6d;
+}
+.item:not(:last-child) {
+  margin-bottom: 20px;
+}

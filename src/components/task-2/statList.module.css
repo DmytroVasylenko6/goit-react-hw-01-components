@@ -1,0 +1,13 @@
+.statList {
+  display: flex;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 20%;
+  padding: 10px 0px;
+  color: #ffffff;
+}
