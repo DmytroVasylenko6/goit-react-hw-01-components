@@ -2,19 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import s from './FriendListItem.module.css';
 
-const isOnlineColor = {
-  true: '#00f800',
-  false: '#f80000',
-};
-
 export default function FriendListItem({ isOnline, name, avatar }) {
   return (
     <React.Fragment>
       <span
-        className={s.status}
-        style={{
-          backgroundColor: isOnline ? isOnlineColor.true : isOnlineColor.false,
-        }}
+        className={isOnline ? s.green : s.red}
       >
         {isOnline}
       </span>
