@@ -1,40 +1,29 @@
-import Profile from './components/Profile/Profile';
-import StatList from './components/Statistic/StatList/StatList';
-import FriendList from './components/FriendList/FriendList/FriendList';
-import TransactionHistory from './components/TransactionList/TransactionList/TransactionList';
-import Section from './components/Section/Section'
-
-import statData from './db/statistical-data.json';
-import user from './db/user.json';
-import friends from './db/friends.json';
-import transactions from './db/transactions.json';
-
+import Profile from './components/task-1/Profile';
+import StatisticSection from './components/task-2/statisticSection';
+import statData from './components/task-2/statistical-data.json';
+import user from './components/task-1/user.json';
+import FriendSection from './components/task-3/FriendSection';
+import friends from './components/task-3/friends.json';
+import transactions from './components/task-4/transactions.json';
+import TransactionHistory from './components/task-4/TransactionList';
 
 export default function App() {
   return (
-    <>
-      <Section>
-          <Profile
+    <div>
+      <Profile
         avatar={user.avatar}
         name={user.name}
         tag={user.tag}
         location={user.location}
         stats={user.stats}
-        />
-      </Section>
+      />
 
-      <Section title="UPLOAD STATS">
-        <StatList statItems={statData} />
-      </Section>
-
-      <Section title="FRIENDS LIST">
-          <FriendList friends={friends} />
-      </Section>
-
-      <Section title="Transaction history">
-            <TransactionHistory transactions={transactions}/>
-      </Section>
-    
-    </>
+      <StatisticSection title="UPLOAD STATS" stat={statData} />
+      <FriendSection title="FRIENDS LIST" friends={friends} />
+      <TransactionHistory
+        title="История транзакций"
+        transactions={transactions}
+      />
+    </div>
   );
 }

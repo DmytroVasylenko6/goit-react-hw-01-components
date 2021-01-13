@@ -1,17 +1,17 @@
-import StatItem from '../StatItem/StatItem';
+import StatItem from './statItem';
 import PropTypes from 'prop-types';
-import s from './StatList.module.css';
+import s from './statList.module.css';
 
 export default function StatList({ statItems }) {
   return (
     <ul className={s.statList}>
-      {statItems.map(({ id, label, percentage, color })  => (
+      {statItems.map(statItem => (
         <li
-          key={id}
+          key={statItem.id}
           className={s.item}
-          style={{ backgroundColor: color }}
+          style={{ backgroundColor: statItem.color }}
         >
-          <StatItem label={label} percentage={percentage} />
+          <StatItem label={statItem.label} percentage={statItem.percentage} />
         </li>
       ))}
     </ul>
