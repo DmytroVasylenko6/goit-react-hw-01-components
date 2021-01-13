@@ -1,0 +1,33 @@
+.status {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 50%;
+}
+
+.avatar {
+  width: 100px;
+  height: auto;
+  margin: 0 20px;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.red {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 50%;
+  background-color: #f80000;
+}
+
+.green {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 50%;
+  background-color: #00f800;
+}

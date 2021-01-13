@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import s from './statItem.module.css';
+import s from './StatItem.module.css';
 
 export default function StatItem({ label, percentage }) {
   return (
